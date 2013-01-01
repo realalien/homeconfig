@@ -25,5 +25,20 @@ export PS1="\w$"
 
 # 2013.1.1 for quick writing down note under any project
 NOW=$(date +"%F-%H-%M")
-alias note='touch $NOW.rb'
+alias note='touch note_$NOW.rb'
+
+
+# 2013.1.1 added backup dotfiles using git
+# REF: http://sursolid.com/managing-home-dotfiles-with-git-and-github
 alias homeconfig='git --git-dir=/Users/realalien/.homeconfig.git/ --work-tree=/Users/realalien'
+# TROUBLE_SHOOT: 
+# * If you get an error when running config pull to the effect of “You asked me to pull without...” run the following: 
+#   $ echo -e '[branch "master"]\n remote = origin\n merge = refs/heads/master' >> ~/.homeconfig.git/config
+# SETUP: configuration on second machine
+# $ cd ~
+# $ mv .bash_profile .bash_profile.bak
+# $ git clone git@github.com:GITHUB_USERNAME/homeconfig.git homeconfig.git
+# $ mv homeconfig.git/.git .homeconfig.git
+# $ shopt -s dotglob
+# $ mv -i homeconfig.git/* .
+# $ rmdir homeconfig.git
