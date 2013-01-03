@@ -25,7 +25,8 @@ export PS1="\w$"
 
 # 2013.1.1 for quick writing down note under any project
 NOW=$(date +"%F-%H-%M")
-alias note='touch note_$NOW.rb'
+FILENAME=note_$NOW.txt
+alias note='touch $FILENAME && vi $FILENAME'
 
 
 # 2013.1.1 added backup dotfiles using git
