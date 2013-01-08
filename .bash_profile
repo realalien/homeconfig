@@ -26,7 +26,7 @@ export PS1="\w$"
 # 2013.1.1 for quick writing down note under any project
 NOW=$(date +"%F-%H-%M")
 FILENAME=note_$NOW.txt
-alias note='touch $FILENAME && vi $FILENAME'
+alias note='now=`date +"%F-%H-%M"` && touch note_$now.txt && vi note_$now.txt'
 
 
 # 2013.1.1 added backup dotfiles using git
