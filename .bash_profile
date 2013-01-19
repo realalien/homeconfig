@@ -43,3 +43,7 @@ alias homeconfig='git --git-dir=/Users/realalien/.homeconfig.git/ --work-tree=/U
 # $ shopt -s dotglob
 # $ mv -i homeconfig.git/* .
 # $ rmdir homeconfig.git
+
+
+# 2013.1.19 add scala
+export PATH="/Users/realalien/devtools/scala-2.10.0/bin:$PATH"
